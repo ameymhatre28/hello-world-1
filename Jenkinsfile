@@ -9,6 +9,12 @@ pipeline {
         }
 
     }
+    tools {
+        
+        maven 'M2_HOME'
+               
+    }
+ 
 
     // This section contains environment variables which are available for use in the
     // pipeline's stages.
