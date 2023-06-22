@@ -35,11 +35,12 @@ stages {
             }
         }
 
-        //stage('Cloning Git') {
-            //steps {
-                //checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/sd031/aws_codebuild_codedeploy_nodeJs_demo.git']]])     
-            //}
-        //}
+      stage('Code Build') {
+            steps {
+                sh "mvn clean package" 
+
+            }
+        }
 
     // Building Docker images
     stage('Building image') {
