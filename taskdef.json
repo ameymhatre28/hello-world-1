@@ -1,10 +1,23 @@
-  "portMappings": [
+{
+    "family": "Web-Application",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+        {
+            "name": "WebApp",
+            "image": "{{image}}",
+            "portMappings": [
                 {
                     "containerPort": 8080,
-                    "hostPort": 8080,
                     "hostPort": 8080,
                     "protocol": "tcp"
                 }
             ],
-
-  
+            "essential": true
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "512",
+    "memory": "1024"
+}
