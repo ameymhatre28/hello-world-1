@@ -48,6 +48,15 @@ stages {
             }
         }
 
+      // Scanning code
+    stage('soanrqube analysis') {
+        steps {
+        withsonarQubeEnv('Sonarqube-4.8') {
+        sh "mvn sonar:sonar"
+        }
+        }
+    }
+
     // Building Docker images
     stage('Building image') {
       steps{
