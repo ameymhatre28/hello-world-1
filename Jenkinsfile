@@ -51,7 +51,7 @@ stages {
       // Scanning code
     stage('soanrqube analysis') {
         steps {
-        withsonarQubeEnv('sonarqube-7.9.1') {
+        withSonarQubeEnv('sonarqube-7.9.1') {
         sh "mvn sonar:sonar"
         }
         }
