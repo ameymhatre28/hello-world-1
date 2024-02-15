@@ -19,8 +19,8 @@ pipeline {
     // This section contains environment variables which are available for use in the
     // pipeline's stages.
     environment {
- AWS_ACCOUNT_ID="048134285155"
- AWS_DEFAULT_REGION="ap-southeast-1" 
+ AWS_ACCOUNT_ID="836154072079"
+ AWS_DEFAULT_REGION="us-east-1" 
  IMAGE_REPO_NAME="test"
  IMAGE_TAG="latest"
  REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
