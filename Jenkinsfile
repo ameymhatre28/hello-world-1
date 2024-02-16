@@ -33,6 +33,13 @@ stages {
             }
         }
 
+    
+         stage('Code Build') {
+            steps {
+                sh "mvn clean package" 
+
+            }
+        }
       
 
     // Building Docker images
