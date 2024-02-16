@@ -6,12 +6,7 @@ pipeline {
             label'Jenkins-Slave'
         }
     }
-    tools {
-        
-        maven 'maven'
-               
-    }
- 
+     
 
     // This section contains environment variables which are available for use in the
     // pipeline's stages.
@@ -38,21 +33,7 @@ stages {
             }
         }
 
-      // stage('Code Build') {
-            // steps {
-                // sh "mvn clean package" 
-
-           // }
-        }
-
-      // Scanning code
-    //stage('soanrqube analysis') {
-        //steps {
-        //withSonarQubeEnv('sonarqube-7.9.1') {
-        //sh "mvn sonar:sonar"
-       // }
-       // }
-   // }
+      
 
     // Building Docker images
     stage('Building image') {
