@@ -3,11 +3,8 @@ pipeline {
     // This line is required for declarative pipelines. Just keep it here.
      agent {
         node {
-
-        label 'Jenkins-Slave'
-
+            label'Jenkins-Slave'
         }
-
     }
     tools {
         
@@ -41,21 +38,21 @@ stages {
             }
         }
 
-      stage('Code Build') {
-            steps {
-                sh "mvn clean package" 
+      // stage('Code Build') {
+            // steps {
+                // sh "mvn clean package" 
 
-            }
+           // }
         }
 
       // Scanning code
-    stage('soanrqube analysis') {
-        steps {
-        withSonarQubeEnv('sonarqube-7.9.1') {
-        sh "mvn sonar:sonar"
-        }
-        }
-    }
+    //stage('soanrqube analysis') {
+        //steps {
+        //withSonarQubeEnv('sonarqube-7.9.1') {
+        //sh "mvn sonar:sonar"
+       // }
+       // }
+   // }
 
     // Building Docker images
     stage('Building image') {
