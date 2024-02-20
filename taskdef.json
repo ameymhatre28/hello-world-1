@@ -3,7 +3,7 @@
     "networkMode": "awsvpc",
     "containerDefinitions": [
         {
-            "name": "Jenkins",
+            "name": "Web-App",
             "image": "{{image}}",
             "portMappings": [
                 {
