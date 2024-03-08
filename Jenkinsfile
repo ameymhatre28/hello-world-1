@@ -84,7 +84,7 @@ stages {
         // Create a new task definition revision
         sh "aws ecs register-task-definition --execution-role-arn ${exec_role_arn} --cli-input-json file://taskdef.json --region ${AWS_DEFAULT_REGION}"
         // Update service on Fargate
-        sh "aws ecs create-service --cluster ${cluster} --service sample-app-service --task-definition ${task_def_arn} --region ${AWS_DEFAULT_REGION}"
+        sh "aws ecs update-service --cluster ${cluster} --service sample-app-service --task-definition ${task_def_arn} --region ${AWS_DEFAULT_REGION}"
     }
 }
     }
