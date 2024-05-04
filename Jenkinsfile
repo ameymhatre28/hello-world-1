@@ -11,14 +11,14 @@ pipeline {
     // This section contains environment variables which are available for use in the
     // pipeline's stages.
     environment {
- AWS_ACCOUNT_ID="836154072079"
- AWS_DEFAULT_REGION="eu-north-1" 
+ AWS_ACCOUNT_ID="891377074004"
+ AWS_DEFAULT_REGION="ap-south-1" 
  IMAGE_REPO_NAME="test"
  IMAGE_TAG="latest"
  REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
- task_def_arn = "arn:aws:ecs:eu-north-1:836154072079:task-definition/Web-Application:"
- cluster = "Amey-test"
- exec_role_arn = "arn:aws:iam::836154072079:role/ecsTaskExecutionRole" 
+ task_def_arn = "arn:aws:ecs:ap-south-1:891377074004:task-definition/Devops-Test:"
+ cluster = "Devops"
+ exec_role_arn = "arn:aws:iam::891377074004:role/ecsTaskExecutionRole" 
          
  }
  
