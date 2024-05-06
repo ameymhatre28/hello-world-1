@@ -1,5 +1,6 @@
 {
     "family": "Web-Application",
+    "networkMode": "awsvpc",
     "containerDefinitions": [
         {
             "name": "Web-App",
