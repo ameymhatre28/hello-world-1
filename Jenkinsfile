@@ -69,7 +69,7 @@ stages {
         // Create a new task definition revision
         sh "aws ecs register-task-definition --execution-role-arn ${exec_role_arn} --cli-input-json file://taskdef.json --region ${AWS_DEFAULT_REGION}"
         // Update service on Fargate
-        sh "aws ecs create-service --cluster ${cluster} --service-name Web-App --task-definition ${task_def_arn} --region ${AWS_DEFAULT_REGION} --desired-count 1" 
+        sh "aws ecs create-service --cluster ${cluster} --service-name Web-App --task-definition ${task_def_arn} --region ${AWS_DEFAULT_REGION} --desired-count 1 --launch-type "FARGATE" --network-configuration "awsvpcConfiguration={subnets=[subnet-05c077414f7d610c1],[subnet-01da0adecc6c50345],securityGroups=[sg-0c5349ae977939c27],assignPublicIp=ENABLED}"" 
     }
 }
     }
