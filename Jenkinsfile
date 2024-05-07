@@ -18,7 +18,8 @@ pipeline {
  REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
  task_def_arn = "arn:aws:ecs:ap-south-1:891377074004:task-definition/Web-Application"
  cluster = "WebApp"
- exec_role_arn = "arn:aws:iam::891377074004:role/ecsTaskExecutionRole" 
+ exec_role_arn = "arn:aws:iam::891377074004:role/ecsTaskExecutionRole"
+ service ="Web-App"       
          
  }
  
@@ -69,7 +70,7 @@ stages {
         // Create a new task definition revision
         sh "aws ecs register-task-definition --execution-role-arn ${exec_role_arn} --cli-input-json file://taskdef.json --region ${AWS_DEFAULT_REGION}"
         // Update service on Fargate
-        sh "aws ecs update-service --cluster ${cluster} --service-name Web-App --task-definition ${task_def_arn} --region ${AWS_DEFAULT_REGION}" 
+        sh "aws ecs update-service --cluster ${cluster} --service-name ${service}  --task-definition ${task_def_arn} --region ${AWS_DEFAULT_REGION}" 
     }
 }
     }
