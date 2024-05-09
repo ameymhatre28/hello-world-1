@@ -1,6 +1,6 @@
 {
    "cluster": "WebApp",
-   "service": "Web-App",
+   "service": "Web-App", // Changed "serviceName" to "service"
    "taskDefinition": "arn:aws:ecs:ap-south-1:891377074004:task-definition/Web-Application",
    "desiredCount": 1,
    "networkConfiguration": {
@@ -17,3 +17,4 @@
       }
    }
 }
+
