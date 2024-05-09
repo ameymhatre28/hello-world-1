@@ -1,6 +1,6 @@
 {
    "cluster": "WebApp",
-   "serviceName": "Web-App", // Added the "serviceName" parameter
+   "serviceName": "Web-App",
    "taskDefinition": "arn:aws:ecs:ap-south-1:891377074004:task-definition/Web-Application",
    "desiredCount": 1,
    "networkConfiguration": {
