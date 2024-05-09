@@ -2,15 +2,17 @@
     "cluster": "WebApp",
     "serviceName": "Web-App",
     "taskDefinition": "arn:aws:ecs:ap-south-1:891377074004:task-definition/Web-Application",
-    "region": "ap-south-1"
+    "region": "ap-south-1",
+    "desiredCount": "1",
     "network-configuration": [
       {
   "awsvpcConfiguration": {
     "subnets": ["05c077414f7d610c1","0b9f326620954a829","01da0adecc6c50345"],
     "securityGroups": ["0c5349ae977939c27"],
     "assignPublicIp": "ENABLED"
+
   }
 }
-    "desiredCount": 1,
+],   
    
 }
