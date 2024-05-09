@@ -1,6 +1,6 @@
 {
    "cluster": "WebApp",
-   "service": "Web-App", // Changed "serviceName" to "service"
+   "service": "Web-App",
    "taskDefinition": "arn:aws:ecs:ap-south-1:891377074004:task-definition/Web-Application",
    "desiredCount": 1,
    "networkConfiguration": {
@@ -8,7 +8,7 @@
          "subnets": [
             "05c077414f7d610c1",
             "01da0adecc6c50345",
-            "0b9f326620954a829"           
+            "0b9f326620954a829"
          ],
          "securityGroups": [
             "0c5349ae977939c27"
