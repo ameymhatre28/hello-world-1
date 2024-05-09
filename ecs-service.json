@@ -1,17 +1,17 @@
 {
    "cluster": "WebApp",
-   "service": "Web-App",
+   "serviceName": "Web-App", // Added the "serviceName" parameter
    "taskDefinition": "arn:aws:ecs:ap-south-1:891377074004:task-definition/Web-Application",
    "desiredCount": 1,
    "networkConfiguration": {
       "awsvpcConfiguration": {
          "subnets": [
-            "subnet-05c077414f7d610c1",
-            "subnet-01da0adecc6c50345",
-            "subnet-0b9f326620954a829"
+            "05c077414f7d610c1",
+            "01da0adecc6c50345",
+            "0b9f326620954a829"
          ],
          "securityGroups": [
-            "sg-0c5349ae977939c27"
+            "0c5349ae977939c27"
          ],
          "assignPublicIp": "ENABLED"
       }
