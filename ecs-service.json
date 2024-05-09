@@ -3,7 +3,7 @@
    "serviceName": "Web-App",
    "taskDefinition": "arn:aws:ecs:ap-south-1:891377074004:task-definition/Web-Application",
    "region": "ap-south-1",
-   "desiredCount": "1",
+   "desiredCount": 1,
    "network-configuration": [
       {
          "awsvpcConfiguration": {
