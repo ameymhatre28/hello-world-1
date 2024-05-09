@@ -14,7 +14,7 @@
          "securityGroups": [
             "sg-0c5349ae977939c27"
          ],
-         "assignPublicIp": "Enabled"
+         "assignPublicIp": "ENABLED"
       }
    }
 }
