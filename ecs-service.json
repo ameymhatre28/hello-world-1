@@ -2,6 +2,7 @@
    "cluster": "WebApp",
    "serviceName": "Web-App",
    "taskDefinition": "arn:aws:ecs:ap-south-1:891377074004:task-definition/Web-Application",
+   "launchType": "FARGET",
    "desiredCount": 1,
    "networkConfiguration": {
       "awsvpcConfiguration": {
