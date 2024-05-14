@@ -74,7 +74,7 @@ stages {
                 sh "aws ecs update-service --cluster ${cluster} --service ${service} --task-definition ${task_def_arn} --region ${AWS_DEFAULT_REGION}"
             } else {
                 // Service doesn't exist, create it
-                sh "aws ecs create-service --cluster ${cluster} --service-name ${service} --task-definition ${task_def_arn} --region ${AWS_DEFAULT_REGION}"
+                sh "aws ecs create-service --cli-input-json file://ecs-service.json" 
             }
         }
     }
