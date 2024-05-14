@@ -67,7 +67,7 @@ stages {
     steps {
         script {
             def serviceExists = sh(returnStatus: true, script: "aws ecs describe-services --cluster ${cluster} --service ${service} --region ${AWS_DEFAULT_REGION}")
-            if (serviceExists == 1) {
+            if (serviceExists == 0) {
                 // Service exists, update it
                 sh "sed -i 's|{{image}}|${REPOSITORY_URI}:${IMAGE_TAG}|' taskdef.json"
                 sh "aws ecs register-task-definition --execution-role-arn ${exec_role_arn} --cli-input-json file://taskdef.json --region ${AWS_DEFAULT_REGION}"
