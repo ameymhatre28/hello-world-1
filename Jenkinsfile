@@ -3,7 +3,7 @@ pipeline {
     // This line is required for declarative pipelines. Just keep it here.
      agent {
         node {
-            label'Jenkins-Slave'
+            label'Slave1'
         }
     }
      
@@ -11,7 +11,7 @@ pipeline {
     // This section contains environment variables which are available for use in the
     // pipeline's stages.
     environment {
- AWS_ACCOUNT_ID="891377074004"
+ AWS_ACCOUNT_ID="954976331022"
  AWS_DEFAULT_REGION="ap-south-1" 
  IMAGE_REPO_NAME="test"
  IMAGE_TAG="latest"
