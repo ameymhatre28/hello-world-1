@@ -1,7 +1,7 @@
 {
    "cluster": "WebApp",
    "serviceName": "Web-App",
-   "taskDefinition": "arn:aws:ecs:ap-south-1:891377074004:task-definition/Web-Application",
+   "taskDefinition": "arn:aws:ecs:ap-south-1:913524928466:task-definition/Web-Application",
    "launchType": "FARGATE",
    "desiredCount": 1,
    "networkConfiguration": {
