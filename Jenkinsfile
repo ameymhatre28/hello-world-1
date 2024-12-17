@@ -3,7 +3,7 @@ pipeline {
     // This line is required for declarative pipelines. Just keep it here.
      agent {
         node {
-            label'Slave1'
+            label'Slave'
         }
     }
      
