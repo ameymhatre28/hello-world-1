@@ -47,7 +47,7 @@ stages {
     stage('Building image') {
       steps{
         script {
-          dockerImage = podman.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}"
+          podmanImage = podman build -t "${IMAGE_REPO_NAME}:${IMAGE_TAG}"
         }
       }
     }
