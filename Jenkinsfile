@@ -16,9 +16,9 @@ pipeline {
  IMAGE_REPO_NAME="test"
  IMAGE_TAG="latest"
  REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
- task_def_arn = "arn:aws:ecs:ap-south-1:891377074004:task-definition/Web-Application"
+ task_def_arn = "arn:aws:ecs:ap-south-1:913524928466:task-definition/Web-Application"
  cluster = "WebApp"
- exec_role_arn = "arn:aws:iam::891377074004:role/ecsTaskExecutionRole"
+ exec_role_arn = "arn:aws:iam::913524928466:role/ecsTaskExecutionRole"
  service ="Web-App"       
          
  }
